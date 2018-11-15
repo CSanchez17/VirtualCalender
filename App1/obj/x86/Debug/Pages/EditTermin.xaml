@@ -1,0 +1,49 @@
+﻿<Page
+    x:Class="VirtualCalendarV01.Pages.EditTermin"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:VirtualCalendarV01.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.BottomAppBar>
+        <CommandBar >
+            <CommandBar.Content>
+                <Grid/>
+            </CommandBar.Content>
+            <AppBarButton x:ConnectionId='1' Icon="Back" Label="Zurück"                             />
+            <AppBarButton x:ConnectionId='2' Icon="Accept" Label="Ok"                              />
+            <AppBarButton x:ConnectionId='3' Icon="delete" Label="Löschen"                              />
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel>
+            <ComboBox x:ConnectionId='4' x:Name="CbKalenderAuswahl" Header="Kalender Auswahl" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="20,20,20,20"                                                      >
+                <ComboBoxItem Content="Individualansicht"/>
+                <ComboBoxItem Content="Gruppenansicht"/>
+            </ComboBox>
+            <TextBox x:ConnectionId='5' x:Name="Tb_Bezeichnung" Header="Bezeichnung der Aufgabe" Margin="20,0,20,20" InputScope="EmailSmtpAddress"/>
+            <Grid Height="auto" Width="auto" Margin="20,0,20,20" VerticalAlignment="Stretch">
+                <CalendarDatePicker x:ConnectionId='9' x:Name="EndCalendarDatePicker" Margin="427,-9,0,9" Header ="Bis:" PlaceholderText="End" Width="150"/>
+                <CalendarDatePicker x:ConnectionId='10' x:Name="StartCalendarDatePicker" Margin="0,-9,0,9" Header ="Von:" PlaceholderText="Start" Width="150"/>
+             
+                <TimePicker x:ConnectionId='11' x:Name="TpVon" HorizontalAlignment="Left" Margin="155,18,0,0" VerticalAlignment="Top" Width="150"/>
+                <TimePicker x:ConnectionId='12' x:Name="TpBis" HorizontalAlignment="Left" Margin="584,18,0,0" VerticalAlignment="Top"/>
+            </Grid>
+                 <ComboBox x:ConnectionId='6' x:Name="CbWiederholungAuswahl" Header="Wiederholungszyklus" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="20,0,20,20"                                                          >
+                <ComboBoxItem Content="Keine"/>
+                <ComboBoxItem Content="Jaehrlich"/>
+                <ComboBoxItem Content="Monatlich"/>
+                <ComboBoxItem Content="Woechentlich"/>
+                <ComboBoxItem Content="Taeglich"/>
+            </ComboBox>
+            <TextBox x:ConnectionId='7' x:Name="Tb_TerminBeschreibung" PlaceholderText="Termin Beschreibung" Margin="20,0,20,20" InputScope="Password" Height="82"/>
+            <ComboBox x:ConnectionId='8' x:Name="CbPersonAuswahl" Header="Verantwortliche Person" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="20,0,20,20"                                                    >
+
+            </ComboBox>
+        </StackPanel>
+    </Grid>
+</Page>
+

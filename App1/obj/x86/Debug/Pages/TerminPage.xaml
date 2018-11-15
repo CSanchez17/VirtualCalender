@@ -1,0 +1,41 @@
+﻿<Page
+    x:Class="VirtualCalendarV01.Pages.TerminPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:VirtualCalendarV01.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.Content>
+                <Grid/>
+            </CommandBar.Content>
+            <AppBarButton x:ConnectionId='1' Icon="Back" Label="Zurück"                            />
+            <AppBarButton x:ConnectionId='2' Icon="Add" Label="Hinzufügen"                           />
+            <AppBarButton x:ConnectionId='3' Icon="Refresh" Label="Erneuern"                               />
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <ListBox x:ConnectionId='4' x:Name="TerminList" Margin="0,0,0,50"                                                   Background="{x:Null}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Padding="20" Margin="20" Background="DarkGray" >
+                        <TextBlock Text="{Binding Str_Bezeichnung}" FontSize="24" Foreground="Beige"/>
+                        <TextBlock Text="{Binding enum_KalenderAuswahl}" FontSize="20" Foreground="White"/>
+                        <TextBlock Text="{Binding Dt_Beginn}" FontSize="20" Foreground="White"/>
+                        <TextBlock Text="{Binding Dt_Ende}" FontSize="20" Foreground="White"/>
+                        <TextBlock Text="{Binding Str_TerminBeschreibung}" FontSize="20" Foreground="White"/>
+                        <TextBlock Text="{Binding enum_WiederholungsZyklus}" FontSize="20" Foreground="White"/>
+                        <TextBlock Text="{Binding Str_BenutzerId}" FontSize="20" Foreground="White"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <TextBox x:ConnectionId='5' x:Name="TbTermine" HorizontalAlignment="Center" Height="61" Margin="10,5,10,10" TextWrapping="Wrap" Text="Termine" VerticalAlignment="Top" Width="187" IsReadOnly="True" FontFamily="Segoe Script" FontSize="36"/>
+    </Grid>
+</Page>
+
