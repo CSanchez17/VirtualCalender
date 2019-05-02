@@ -1,0 +1,22 @@
+Licenzen:
+
+EntityFramework v6.1.3 :
+https://www.microsoft.com/web/webpi/eula/net_library_eula_deu.htm
+
+Microsoft.Net.Http
+https://www.microsoft.com/net/dotnet_library_license.htm
+
+MySql.Data
+http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+
+MySql.Data.Entities
+http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+
+MySql.Data.Entity
+http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+
+Newtonsoft.Json 10.0.2
+https://raw.githubusercontent.com/JamesNK/Newtonsoft.Json/master/LICENSE.md
+
+
+
